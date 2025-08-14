@@ -1,4 +1,4 @@
-# Sort It Out!
+# Sort It Out! (Demo)
 
 Sort It Out! is an interactive web application designed to help users **visualize** and **understand** various sorting algorithms.  
 Watch algorithms like **Bubble Sort**, **Merge Sort**, **Selection Sort**, **Insertion Sort**, and **Quick Sort** in action, with step-by-step animations and explanations.
