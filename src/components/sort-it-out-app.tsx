@@ -60,8 +60,8 @@ export function SortItOutApp() {
 
     const newArray: number[] = [];
     for (const s of stringArray) {
-        if (!/^\d+$/.test(s)) {
-            toast({ title: "Invalid Input", description: `'${s}' is not a valid number. Please use comma-separated numbers.`, variant: "destructive" });
+        if (!/^\d+$/.test(s) || s.length > 3) { // also check for length to avoid very large numbers
+            toast({ title: "Invalid Input", description: `'${s}' is not a valid number. Please use comma-separated numbers between 1 and ${MAX_VALUE}.`, variant: "destructive" });
             return;
         }
         const num = parseInt(s, 10);
@@ -113,8 +113,8 @@ export function SortItOutApp() {
   const currentStepData = history[currentStep];
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      <Card className="lg:col-span-1 bg-card border-border">
+    <div className="flex flex-col gap-8">
+      <Card className="bg-card border-border">
         <CardHeader>
           <CardTitle className="text-2xl text-foreground">Controls</CardTitle>
         </CardHeader>
@@ -167,7 +167,7 @@ export function SortItOutApp() {
         </CardContent>
       </Card>
 
-      <div className="lg:col-span-2 space-y-6">
+      <div className="space-y-6">
         <Card className="min-h-[500px] flex flex-col p-4 bg-card border-border">
           <div className="flex-grow flex items-end justify-center gap-1 w-full h-full min-h-[350px]">
             {currentStepData?.array.map((value, index) => {
@@ -181,7 +181,7 @@ export function SortItOutApp() {
 
               return (
                 <div key={index} className="flex flex-col items-center flex-1 h-full relative group">
-                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-8 flex items-center justify-center">
+                   <div className="absolute top-0 -translate-y-full left-1/2 -translate-x-1/2 w-8 h-8 flex items-center justify-center">
                      {isShifting && (
                         <div className="w-8 h-8 rounded-full border-4 border-fuchsia-400 animate-pulse"></div>
                      )}
