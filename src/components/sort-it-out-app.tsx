@@ -168,8 +168,8 @@ export function SortItOutApp() {
       </Card>
 
       <div className="space-y-6">
-        <Card className="min-h-[500px] flex flex-col p-4 bg-card border-border">
-          <div className="flex-grow flex items-end justify-center gap-1 w-full h-full min-h-[350px]">
+        <Card className="flex flex-col p-4 bg-card border-border">
+          <div className="flex-grow flex items-end justify-center gap-1 w-full min-h-[50px]">
             {currentStepData?.array.map((value, index) => {
               const { comparing, swapping, sorted, auxiliary, shifting } = currentStepData;
               const isComparing = comparing.includes(index);
