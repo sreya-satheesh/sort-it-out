@@ -3,7 +3,7 @@ import { SortItOutApp } from "@/components/sort-it-out-app";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-4 sm:p-8 md:p-12 bg-background">
-      <div className="w-full max-w-7xl mx-auto flex-grow">
+      <div className="w-full max-w-7xl mx-auto flex flex-col gap-8 flex-grow lg:max-w-5xl">
         <header className="text-center mb-12">
           <h1 className="font-headline text-5xl sm:text-6xl md:text-7xl font-bold text-foreground">
             Sort It Out!
