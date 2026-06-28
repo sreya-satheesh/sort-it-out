@@ -15,7 +15,7 @@ export default function Home() {
         <SortItOutApp />
       </div>
       <footer className="w-full max-w-7xl mx-auto text-center mt-12 text-muted-foreground text-sm">
-        <p>Created with ❤️, from India.</p>
+        <p>Built with ❤️ by Sreya</p>
       </footer>
     </main>
   );
