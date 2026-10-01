@@ -29,7 +29,7 @@ Watch algorithms like **Bubble Sort**, **Merge Sort**, **Selection Sort**, **Ins
 
 ## Live Demo
 
-https://sort-it-out-five.vercel.app/
+https://sort-it-out-topaz.vercel.app/
 
 ---
 
